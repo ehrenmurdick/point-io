@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PointIo</title>
-    <%= csrf_meta_tags %>
+<head>
+<title>point.io</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0&#45;alpha.5/css/bootstrap.min.css" integrity="sha384&#45;AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"> -->
+</head>
 
-  <body>
+<body>
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <a class="navbar-brand" href="#">point.io</a>
+</nav>
+
+<div class="container">
+  <div class="points col-lg-4">
     <%= yield %>
-  </body>
+  </div>
+</div><!-- /.container -->
+
+</body>
 </html>
