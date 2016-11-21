@@ -1,3 +1,3 @@
-<%= form_for(Party.new) do %>
-  <%= submit_tag 'Start a party' %>
+<%= form_for(Party.new) do |f| %>
+  <%= f.submit 'Start a party', class: 'btn btn-primary' %>
 <% end %>
