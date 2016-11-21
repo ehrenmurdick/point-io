@@ -1,9 +1,3 @@
-<ul>
-  <% @party.votes.each do |vote| %>
-    <li><%= vote.points %></li>
-  <% end %>
-</ul>
-
 <%= form_for [@party, @party.votes.new] do |f| %>
   <%= f.number_field :points %>
   <%= submit_tag 'Vote!' %>

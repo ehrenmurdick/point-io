@@ -1,3 +1,4 @@
+<h2><%= @party.votes.count %> votes are in!</h2>
 <ul>
   <% @party.votes.each do |vote| %>
     <li><%= vote.points %></li>
@@ -7,3 +8,9 @@
 <%= form_for @party do |f| %>
   <%= submit_tag 'Restart!' %>
 <% end %>
+
+<script>
+  setTimeout(function() {
+      window.location.href = window.location.href;
+   }, 1000);
+</script>
