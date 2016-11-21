@@ -1,0 +1,9 @@
+<ul>
+  <% @party.votes.each do |vote| %>
+    <li><%= vote.points %></li>
+  <% end %>
+</ul>
+
+<%= form_for @party do |f| %>
+  <%= submit_tag 'Restart!' %>
+<% end %>
