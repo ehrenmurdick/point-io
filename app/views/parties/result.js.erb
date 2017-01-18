@@ -1,6 +1,0 @@
-<% if @party.votes.count.zero? %>
-  window.location.href = <%= party_path(@party).to_json.html_safe %>;
-<% else %>
-  $('tbody').html(<%= render('parties/votes').to_json.html_safe %>);
-  $('#count').html(<%= @party.votes.count %>);
-<% end %>
