@@ -9,15 +9,13 @@ class PartiesController < ApplicationController
 
   def create
     @party = Party.create
-    redirect_to party_path(@party)
   end
 
   def show
   end
 
-  def update
+  def reset
     @party.votes.destroy_all
-    redirect_to party_path(@party)
   end
 
   def find_party

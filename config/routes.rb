@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
     member do
       get :result
+      put :reset
     end
   end
 end

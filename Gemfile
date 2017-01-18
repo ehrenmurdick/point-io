@@ -36,6 +36,9 @@ end
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'json-schema-rspec'
+  gem 'rspec-its'
 end
 
 group :development do
