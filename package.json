@@ -1,0 +1,30 @@
+{
+  "name": "point-ninja",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "cycle-scripts-es-browserify": "0.7.5"
+  },
+  "dependencies": {
+    "browserify": "~10.2.4",
+    "browserify-incremental": "^3.0.1",
+    "@cycle/dom": "^14.3.0",
+    "@cycle/rxjs-run": "^3.3.0",
+    "rxjs": "^5.0.3",
+    "xstream": "^9.3.0"
+  },
+  "scripts": {
+    "start": "cycle-scripts start",
+    "test": "cycle-scripts test",
+    "build": "cycle-scripts build",
+    "eject": "cycle-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "browserify": {
+    "transform": ["babelify"]
+  }
+}
