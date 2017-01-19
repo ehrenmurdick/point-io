@@ -6,10 +6,12 @@
     "cycle-scripts-es-browserify": "0.7.5"
   },
   "dependencies": {
+    "@cycle/dom": "^14.3.0",
+    "@cycle/http": "^11.2.0",
+    "@cycle/rxjs-run": "^3.3.0",
     "browserify": "~10.2.4",
     "browserify-incremental": "^3.0.1",
-    "@cycle/dom": "^14.3.0",
-    "@cycle/rxjs-run": "^3.3.0",
+    "hyperscript": "^2.0.2",
     "rxjs": "^5.0.3",
     "xstream": "^9.3.0"
   },
@@ -25,6 +27,8 @@
     ]
   },
   "browserify": {
-    "transform": ["babelify"]
+    "transform": [
+      "babelify"
+    ]
   }
 }
