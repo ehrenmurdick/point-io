@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161121032114) do
+ActiveRecord::Schema.define(version: 20170914164031) do
 
   create_table "estimates", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20161121032114) do
   create_table "parties", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "session_id"
   end
 
   create_table "users", force: :cascade do |t|

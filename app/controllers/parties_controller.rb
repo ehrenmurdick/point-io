@@ -8,7 +8,8 @@ class PartiesController < ApplicationController
   end
 
   def create
-    @party = Party.create
+    @party = Party.create({"session_id":session.id})
+
     redirect_to party_path(@party)
   end
 

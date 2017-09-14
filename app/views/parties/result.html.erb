@@ -5,8 +5,10 @@
   </tbody>
 </table>
 
-<%= form_for @party do |f| %>
-  <%= f.submit 'Restart!', class: 'btn btn-danger' %>
+<% if session.id == @party.session_id %>
+  <%= form_for @party do |f| %>
+    <%= f.submit 'Restart!', class: 'btn btn-danger' %>
+  <% end %>
 <% end %>
 
 <script>
