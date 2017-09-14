@@ -1,0 +1,12 @@
+<% if @party.votes.count.zero? %>
+  <% if session.id != @party.session_id %>
+    if(!window.alertPartyRestart) {
+      alert("Owner restarted the party.");
+      window.alertPartyRestart = true;
+    }
+  <% end %>
+<% else %>
+  window.alertPartyRestart = false;
+<% end %>
+$('tbody').html(<%= render('parties/votes').to_json.html_safe %>);
+$('#count').html(<%= @party.votes.count %>);

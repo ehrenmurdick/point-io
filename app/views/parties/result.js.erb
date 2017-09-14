@@ -1,4 +1,7 @@
 <% if @party.votes.count.zero? %>
+  <% if session.id != @party.session_id %>
+    alert("Owner restarted the party.")
+  <% end %>
   window.location.href = <%= party_path(@party).to_json.html_safe %>;
 <% else %>
   $('tbody').html(<%= render('parties/votes').to_json.html_safe %>);

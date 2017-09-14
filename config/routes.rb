@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
     member do
       get :result
+      get :watch
     end
   end
 end

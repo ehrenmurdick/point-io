@@ -21,7 +21,6 @@ class CreatingAPartyTest < ActionDispatch::IntegrationTest
     assert_no_button('Restart!')
   end
 
-
   def teardown
     Capybara.reset_sessions!
     Capybara.use_default_driver

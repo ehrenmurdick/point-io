@@ -18,10 +18,14 @@ class PartiesController < ApplicationController
 
   def update
     @party.votes.destroy_all
-    redirect_to party_path(@party)
+    redirect_to :back
   end
 
   def find_party
     @party = Party.find(params[:id])
+  end
+
+  def watch
+
   end
 end

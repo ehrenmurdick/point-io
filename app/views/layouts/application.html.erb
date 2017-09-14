@@ -8,6 +8,10 @@
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0&#45;alpha.5/css/bootstrap.min.css" integrity="sha384&#45;AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"> -->
+
+<script>
+window.alertPartyRestart = true;
+</script>
 </head>
 
 <body>
@@ -17,6 +21,7 @@
 
 <div class="container">
   <div class="points col-lg-4">
+    <%= flash['notice'] %>
     <%= yield %>
   </div>
 </div><!-- /.container -->
