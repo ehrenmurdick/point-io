@@ -1,4 +1,7 @@
-<h2><span id="count"><%= @party.votes.count %></span> votes are in!</h2>
+<h2 class="result">
+  <%= render partial: 'vote_count', locals: {count: @party.votes.count} %>
+</h2>
+
 <table class="table table-striped table-hover">
   <tbody>
     <%= render 'parties/votes' %>

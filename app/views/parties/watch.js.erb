@@ -10,3 +10,4 @@
 <% end %>
 $('tbody').html(<%= render('parties/votes').to_json.html_safe %>);
 $('#count').html(<%= @party.votes.count %>);
+$('h2.result').html(<%= render(partial: 'parties/vote_count', locals: {count: @party.votes.count}).to_json.html_safe %>);
