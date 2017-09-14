@@ -11,6 +11,14 @@
 
 <script>
 window.alertPartyRestart = true;
+
+window.startPolling = function(url) {
+  $(function() {
+      setInterval(function() {
+        $.get(url);
+      }, 1000);
+  });
+}
 </script>
 </head>
 

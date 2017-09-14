@@ -2,11 +2,7 @@
   <%= render partial: 'vote_count', locals: {count: @party.votes.count} %>
 </h2>
 
-<table class="table table-striped table-hover">
-  <tbody>
-    <%= render 'parties/votes' %>
-  </tbody>
-</table>
+<%= render 'parties/votes_table' %>
 
 <% if session.id == @party.session_id %>
   <%= form_for @party do |f| %>
@@ -20,9 +16,5 @@
 
 
 <script>
-$(function() {
-    setInterval(function() {
-      $.get(<%= watch_party_path(@party, format: :js).to_json.html_safe %>);
-    }, 1000);
-});
+startPolling(<%= watch_party_path(@party, format: :js).to_json.html_safe %>);
 </script>
